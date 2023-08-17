@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Película</title>
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block title %}Agregar Película{% endblock %}
+    
+    {% block content %}
+    <h2>Agregar Película</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    {% endblock %}
+</body>
+</html>
+
